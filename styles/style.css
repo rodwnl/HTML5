@@ -1,9 +1,9 @@
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./fontello.css);
+
 /* 기본 스타일 */
-*,
-*::before,
-*::after {
+*,*::before,*::after {
   box-sizing: border-box;
 }
 /* 본문 스타일 */
@@ -15,11 +15,7 @@ body {
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 /* 레이아웃 */
-.header,
-.visual,
-.main,
-.slogan,
-.footer-inner {
+.header,.visual,.main,.slogan,.footer-inner {
   width: 940px;
   margin: 0 auto;
 }
@@ -41,7 +37,8 @@ body {
 }
 
 .member li::before {
-  content: ":";
+  font-family: fontello;
+  content: "\e805";
 }
 
 /* 비주얼 */
