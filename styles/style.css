@@ -1,6 +1,13 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 
+
+/* 숨김 콘텐츠 */
+.a11y-hidden{
+  background-color: yellow;
+  position: absolute;
+}
+
 /* 기본 스타일 */
 *, *::before, *::after{
   box-sizing: border-box;
@@ -12,8 +19,16 @@ a{
   text-decoration: none;
 }
 
+html{
+  font-size: 10px;
+}
+
 /* 본문 스타일 */
 body {
+  /* em, rem 단위를 사용해보기.
+    em: 부모를 기준으로 계산, rem: root를 기준으로 계산
+  */
+  font-size: 1.4rem;
   color: #212121; 
   background: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -29,7 +44,6 @@ body {
 .header{
   background: #fff;
   padding: 0 30px;
-  height: 15vh;
   border-radius: 0 0 15px 15px;
   position: relative;
 }
@@ -46,6 +60,12 @@ body {
   /* background-color: aqua; */
   text-align: right;
   padding: 4px 0;
+  /* position 속성을 활용하여 .member 영역을 오른쪽으로 10px 만큼 이동하기 */
+  /* position: relative;
+  right: -10px; */
+  /* transform 속성을 활용하여 .member 영역을 오른쪽으로 10px 만큼 이동하기*/
+  transform: translateX(10px);
+
 }
 
 .member li{
@@ -54,10 +74,16 @@ body {
 }
 
 .member a{
-  background-color: coral;
+  /* background-color: coral; */
   padding: 6px 10px;
   display: inherit;
+  text-transform: uppercase;
 }
+
+/* 마지막 li 요소에 포함된 a 요소를 선택하여 오른쪽 padding 값을 0으로 재정의하는 방법 */
+/* .member li:last-child a{
+  padding-right: 0;
+} */
 
 .divider{
   margin-right: 4px;
