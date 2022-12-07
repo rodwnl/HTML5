@@ -154,7 +154,7 @@ body {
   display: inline-block;
 }
 .sub-menu a::before {
-  content: "\e805";
+  content: "\e803";
   font-family: "fontello";
   font-weight: normal;
   display: inline-block;
