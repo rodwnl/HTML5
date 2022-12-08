@@ -139,12 +139,17 @@
     <div class="group group1">
       <section class="login">
         <h2 class="login-title">로그인</h2>
-        <form action="" class="login-form">
+        <form method="POST" action="https://formspree.io/seulbinim@gmail.com" class="login-form">
+          <!-- action == 서버주소 -->
           <fieldset>
             <legend>회원 로그인 폼</legend>
             <div class="user-email">
-              <label for="userEmail"><input type="email" id="userEmail" /></label>
+              <label for="userEmail">아이디<input type="email" id="userEmail" name="userEmail" placeholder="fe@euid.dev" required/></label>
             </div>
+            <div class="user-pw">
+              <label for="userPW">비밀번호<input type="userPw" id="userEmail" name="userPw" placeholder="8자리 이상" required/></label>
+            </div>
+            <button type="submit" class="login-button">로그인</button>
           </fieldset>
         </form>
         <ul class="sign">
