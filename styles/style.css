@@ -209,6 +209,7 @@ body {
   animation-duration: 2000ms;
   animation-fill-mode: forwards;
   display: inline-block;
+  /* 혹은 position : absolute 도 가능  */
 }
 
 /* 메인 */
