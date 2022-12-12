@@ -380,17 +380,68 @@ body {
   color:#f00
 }
 
+/* 웹 관련 용어 */
+.term{
+  margin-top: 20px;
+  padding:10px 15px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.term-title{
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.term-list{
+  margin-top: 10px;
+  background-color: yellow;
+}
+
+.term-list div{
+  margin-top: 10px;
+  background-color: pink;
+  display: flow-root;
+
+}
+
+.term-list-subject{
+  color:#296897;
+  background-color: lime;
+  float:right;
+  width: 145px;
+}
+
+.term-list-thumbnail{
+  background-color: purple;
+  float: left;
+}
+
+.term-list-thumbnail img{
+  vertical-align: middle;
+}
+
+
+.term-list-brief{
+  background-color: coral;
+  float: right;
+  width: 145px;
+}
+
 /* 슬로건 */
 .slogan {
   background: skyblue;
   height: 10vh;
   clear: both;
 }
+
 /* 푸터 */
 .footer {
   background: #ccc
     linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
 }
+
 .footer-inner {
   background: silver;
   height: 15vh;
