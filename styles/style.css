@@ -406,11 +406,15 @@ body {
 
 }
 
+.term-list-subject, .term-list-brief{
+  float: right;
+  width: 145px;
+}
+
 .term-list-subject{
   color:#296897;
+  font-weight: 500;
   background-color: lime;
-  float:right;
-  width: 145px;
 }
 
 .term-list-thumbnail{
@@ -425,8 +429,16 @@ body {
 
 .term-list-brief{
   background-color: coral;
+}
+
+
+.cross .term-list-subject,
+.cross .term-list-brief{
+  float: left;
+}
+
+.cross .term-list-thumbnail{
   float: right;
-  width: 145px;
 }
 
 /* 슬로건 */
