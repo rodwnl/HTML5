@@ -1,6 +1,7 @@
 @import url(./fontello.css);
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./module.css);
 /* 숨김 콘텐츠 */
 .a11y-hidden, legend {
   position: absolute;
@@ -561,7 +562,6 @@ body {
 
 /* 새소식 */
 .news{
-  background-color: yellow;
   margin-top:20px;
   position: relative;
 
@@ -589,7 +589,6 @@ body {
 }
 
 .news-item{
-  background-color: skyblue;
   margin-top: 35px;
   padding-left: 130px; /* padding을 줘도 block의 크기는 유지가 됨. 내용의 시작이 다른 것일뿐 */
   position: relative;
@@ -617,6 +616,11 @@ body {
   text-align: center;
 }
 
+.news-item-thumbnail img{
+  box-shadow: 0 15px 10px 5px #ccc;
+  margin-bottom: 15px;
+}
+
 .news-more{
   position: absolute;
   top:0;
@@ -626,12 +630,93 @@ body {
   padding: 8px;
 }
 
-/* 슬로건 */
-.slogan {
-  background: skyblue;
-  height: 10vh;
-  clear: both;
+/* 신규 이벤트 및 관련 사이트 */
+
+.event {
+  border-bottom: 1px solid #aaa;
+  padding: 10px;
 }
+
+.event-title {
+  display: inline-block;
+}
+
+.event-button-wrapper {
+  background-color: yellow;
+  height: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5px;
+  float: right;
+}
+
+/* IR 기법 -> Image Replacement */
+.event-button {
+  width: 19px;
+  height: 18px;
+  border: 0;
+  padding: 18px 0 0 0;
+  background: url(./images/back_forward.png) no-repeat;
+}
+.event-button-next {
+  background-position: -36px 0;
+}
+.event-button:focus {
+  outline-offset: -2px;
+}
+.event-thumbnail,
+.event-brief {
+  margin: 10px 0;
+}
+
+.event-thumbnail img {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #ccc;
+}
+
+.event-brief {
+  line-height: 1.5;
+}
+
+.related {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.related-list {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 27px;
+  overflow: hidden;
+  transition: height 400ms, padding 400ms 400ms;
+  padding: 0;
+}
+
+.related-list li{
+  background-color: yellow;
+  height: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.related-list a{
+  background-color: pink;
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+.related-list:hover,
+.related-list:focus {
+  height: 147px;
+  padding: 10px 0;
+}
+
 
 /* 푸터 */
 .footer {
